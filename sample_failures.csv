@@ -1,0 +1,4 @@
+run_id,pipeline,error_type,retries,last_duration_minutes
+tr-101,recsys-training,spot_interruption,1,42
+tr-102,vision-training,data_contract,0,15
+tr-103,ranking-training,oom,3,87
