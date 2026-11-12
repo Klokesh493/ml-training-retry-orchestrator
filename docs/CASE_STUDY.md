@@ -2,7 +2,7 @@
 
 ## Business problem
 
-Classifies failed ML training jobs into retry, quarantine, or escalate actions based on failure mode and recent retry history.
+Unconditional retries can waste training capacity and repeat permanent failures. Operators need a bounded policy for retry, quarantine, or escalation.
 
 ## Reproduce the workflow
 
