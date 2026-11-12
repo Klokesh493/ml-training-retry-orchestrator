@@ -1,0 +1,2 @@
+run_id,pipeline,error_type,retries,last_duration_minutes
+tr-103,ranking-training,oom,3,87
