@@ -4,11 +4,14 @@ Classifies failed ML training jobs into retry, quarantine, or escalate actions b
 
 ```mermaid
 flowchart LR
-    N0["sample_failures.csv"]
-    N1["retry_orchestrator.py"]
-    N2["next action / actions"]
-    N3["Result for operator review"]
-    N0 --> N1 --> N2 --> N3
+    A["Training failure and retry count"]
+    B["Apply failure-type policy and retry cap"]
+    C{"Eligible for retry?"}
+    D["Retry or retry with more memory"]
+    E["Quarantine or escalate"]
+    A --> B --> C
+    C -->|Yes| D
+    C -->|No| E
 ```
 
 ## Operational boundaries

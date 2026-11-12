@@ -24,4 +24,16 @@ Run `make verify` with Make and Python 3 installed. The target runs the document
 
 ## Project walkthrough
 
+```mermaid
+flowchart LR
+    A["Training failure and retry count"]
+    B["Apply failure-type policy and retry cap"]
+    C{"Eligible for retry?"}
+    D["Retry or retry with more memory"]
+    E["Quarantine or escalate"]
+    A --> B --> C
+    C -->|Yes| D
+    C -->|No| E
+```
+
 [Architecture and data flow](docs/ARCHITECTURE.md) · [Business problem, demo, and verification](docs/CASE_STUDY.md)
